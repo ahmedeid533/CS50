@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table style= "border: solid 2px">
+        <tr>
+            <td style= "border: solid 2px">symbol</td>
+            <td style= "border: solid 2px">amount</td>
+            <td style= "border: solid 2px">price</td>
+            <td style= "border: solid 2px">date</td>
+        </tr>
+        {% for history in historys %}
+            <tr>
+                <td style= "border: solid 2px">{{history["symbol"]}}</td>
+                <td style= "border: solid 2px">{{history["amount"]}}</td>
+                <td style= "border: solid 2px">{{history["price"] | usd}}</td>
+                <td style= "border: solid 2px">{{history["date"]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

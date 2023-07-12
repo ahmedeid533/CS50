@@ -1,0 +1,147 @@
+/* aka the Top Bar. */
+#selector
+{
+    position:fixed;
+    border-radius: 10px; ;
+    width: 100%;
+    height: 60px;
+    border-bottom: solid ;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 135px auto 150px ;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0.2);
+    background-color: rgba(220, 197, 169, 0.381);
+}
+/* To Make The Bird Movement Inside a Box. */
+#birdbox 
+{    
+    height: 50px;
+    width: auto;
+    grid-column: 2;
+    
+}
+/* the Move Bird  */
+#bird 
+{
+    height: 90%;
+    position: relative;
+    padding:2px;
+    padding-bottom: 10px ;
+    overflow: hidden ; 
+    transform: rotatey(180deg); 
+    transition: transform 0.2s;  
+    
+}
+
+
+/* For All Buttons In the Page*/
+.button {
+    background-color: rgb(213, 193, 90);
+    height: 35px ;
+    width: 120px ;
+    padding: 5px;
+    margin-top: 2px ;
+    font-size: large;
+    border-radius: 10px;
+    padding-top: 16px;
+    text-align: center ;
+    display: none;
+    box-shadow: 1px 1px 2.5px rgb(0, 0, 0.4);
+}
+/* when Hovering The Buttons */
+.button:hover {
+    background-color: azure;
+}
+/* Button Home */
+#home 
+{
+    display: block;
+    font-weight: bold;
+    margin-left: 1px;
+}
+/* For Slide Sections */
+#sections 
+{
+
+    display: block;
+    width: 130px;
+    font-weight: bold;
+    font-size: 23px;
+    grid-column: 3; 
+    position: relative;
+    margin-right: 40px;
+}
+/* For Items In Slide Sections */
+#sections_box{
+    display: flexbox;
+}
+/* To hid the bar */
+.hidden
+{
+    visibility: hidden;
+}
+/* For Evry pragraph Tag In The Page */
+p{
+    text-shadow: 0.3px 0.5px rgb(0, 0, 0.2);
+    width: 80%;
+}
+/* To Make The Blue Lines That Sparate The Sections */
+.line {
+    
+    height: 2px;
+    background-color: rgb(85, 85, 163);
+    box-shadow: 2px 2px 2px rgb(0, 0, 0.4);
+    margin: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* For The Section Head*/
+.section
+{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto 250px auto;
+    height: 100px;
+    padding-top : 50px;
+    border-radius: 75px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Section Name */
+.section_name {
+    font-size: 45px;
+    grid-column: 2;
+    text-align: center;
+
+}
+/* For Seaction Head Hovering */ 
+.section:hover{
+    background-color: bisque;
+    border-radius: 75px;
+    color: rgba(25, 142, 32, 0.682) ;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0.2);
+}
+/* For The Content Of Evry Section */
+.content
+{
+    font-size: 25px; 
+    font-weight: bold; 
+    font-style: italic; 
+    padding-left: 5%;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+.active
+{
+    background-color: blueviolet;
+    border-radius:50% ;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0.2);
+    color: rgb(0, 0, 0);
+}
+

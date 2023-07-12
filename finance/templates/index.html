@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table style= "border: solid 2px">
+        <tr>
+            <td style= "border: solid 2px">name</td>
+            <td style= "border: solid 2px">symbol</td>
+            <td style= "border: solid 2px">amount</td>
+            <td style= "border: solid 2px">price</td>
+            <td style= "border: solid 2px">total</td>
+        </tr>
+        {% for share in shares %}
+            <tr>
+                <td style= "border: solid 2px">{{share["name"]}}</td>
+                <td style= "border: solid 2px">{{share["symbol"]}}</td>
+                <td style= "border: solid 2px">{{share["amount"]}}</td>
+                <td style= "border: solid 2px">{{share["oneShare"] | usd}}</td>
+                <td style= "border: solid 2px">{{share["price"] | usd}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <table style= "border: solid 2px; margin-top: 20px;">
+        <tr>
+            <td style= "border: solid 2px">cash</td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px">{{cash | usd}}</td>
+        </tr>
+        <tr>
+            <td style= "border: solid 2px">total</td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px"></td>
+            <td style= "border: solid 2px">{{total | usd}}</td>
+        </tr>
+    </table>
+
+{% endblock %}
